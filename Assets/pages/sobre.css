@@ -68,13 +68,12 @@ body {
     color: darkgreen;    
 }
 
-
-
-
-
 .descricao-pessoa {
     margin-bottom: 1rem;
-    margin-top: 1rem;  
-    
+    margin-top: 1rem;   
+}
+
+.pessoa-redes {
+    align-self: baseline;
 }
 
