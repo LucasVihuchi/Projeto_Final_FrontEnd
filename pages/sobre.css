@@ -1,0 +1,80 @@
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-size: 100%;
+    list-style-type: none; 
+}
+
+.sobre-nos{
+    background-color: #D9D5CD;
+    font-family: 'Montserrat', sans-serif;    
+    margin-top: 1rem;
+    padding: 0 5%;
+}
+
+.sobre-nos h2 {
+    margin-bottom: 2rem;    
+}
+
+.pessoa-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 4rem;
+    padding-bottom: 2rem;
+}
+
+.pessoa-container-item { 
+    width: 286px;
+    height: 574px;    
+    padding: 1.5rem; /*margem interna, pra não grudar no cantinho*/
+    background-color: #C4C4C4;
+    margin-bottom: 1rem; /*margem inferior*/
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.pessoa-container-item img {
+    margin-bottom: 1rem;
+    height: auto;
+    width: 50%;   
+}
+
+.pessoa-container-item a {
+    text-decoration: none;  
+}
+
+.pessoa-container-item a:link {
+    color: rgb(133, 116, 43);  
+}
+
+.pessoa-container-item a:hover {
+    color: darkgreen;    
+}
+
+.pessoa-container-item a:visited {
+    color: rgb(133, 116, 43);   
+}
+
+.pessoa-container-item a:hover {
+    color: darkgreen;    
+}
+
+
+
+
+
+.descricao-pessoa {
+    margin-bottom: 1rem;
+    margin-top: 1rem;  
+    
+}
+
