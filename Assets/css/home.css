@@ -1,0 +1,142 @@
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-size: 100%;
+    list-style-type: none;  /* não colocar a cor de fundo no body pois atrapalha o restante do código */
+}
+
+.home{
+    background-color: rgba(239, 224, 209, 0.38);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.landing {
+    background: url("../img/imagemTopoMenu.jpg") no-repeat center/cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.NServicos {
+    color: #000000;   
+    text-align: left;  
+    background-color: rgba(210, 195, 178, 0.28);
+    margin-top: 2rem;  /*margin parte de fora*/
+    padding: 0 5%; /*padding espaço de dentro */
+}
+
+.NServicos h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.cards-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 4rem;
+    padding-bottom: 2rem;
+}
+
+.cards-container-item { 
+    width:30.375rem;    
+    padding: 1.5rem; /*margem interna, pra não grudar no cantinho*/
+    background-color: white;
+    margin-bottom: 1rem; /*margem inferior*/
+    box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+    border-radius: 3rem;
+}
+
+
+
+.cards-container-item img {
+    margin-bottom: 1rem;
+    height: auto;
+    width: 100%;   
+}
+
+.descricao-servico {
+    margin-bottom: 1rem;
+    margin-top: 1rem;  
+}
+
+.valor-servico {
+    margin-bottom: 0.7rem;
+    margin-top: 1rem;
+    
+}
+
+.cards-container-item button { 
+    background-color: #EDECE1;
+    color: #452C0E;
+    border:none;
+    display: flex;
+    cursor:pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: auto;
+    padding:1rem 3rem;
+    text-decoration:none;
+    margin-bottom: 0.8rem; /*margem inferior*/
+    border-radius: 2rem; 
+    margin-left: 8.4rem; 
+}
+
+.sobre {
+    background: rgba(109, 129, 122, 0.8); 
+    padding: 1.5rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sobre-o-spa, .localizacao {
+    color: #000000;
+    background-color: #C4C4C4;
+    height:30rem;
+    width: 47.5%;         
+}
+
+.sobre-o-spa {
+    padding: 1.5rem;  
+}
+
+.sobre-o-spa h4 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;  
+}
+
+.texto-sobre {
+    font-size: auto;    
+    justify-content: space-between;
+}
+
+.localizacao iframe {
+    width: 100%; 
+    heighT:100%;     
+}
+
+.insta, .wpp {
+    max-width: 100%;
+    height: auto;
+    
+}
+
+@media only screen and (max-width: 600px /*usar tamanho de tela conhecido*/){
+    .texto-sobre {
+        flex-direction: column;
+    }
+
+    body {
+        font-size: 12px;
+    }
+}
+
+
