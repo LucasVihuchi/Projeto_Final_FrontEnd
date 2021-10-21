@@ -55,8 +55,6 @@ body {
     border-radius: 3rem;
 }
 
-
-
 .cards-container-item img {
     margin-bottom: 1rem;
     height: auto;
@@ -65,13 +63,14 @@ body {
 
 .descricao-servico {
     margin-bottom: 1rem;
-    margin-top: 1rem;  
+    margin-top: 1rem; 
+    font-size: 1rem; 
 }
 
 .valor-servico {
     margin-bottom: 0.7rem;
     margin-top: 1rem;
-    
+    font-size: 0.9rem;     
 }
 
 .cards-container-item button { 
@@ -114,7 +113,7 @@ body {
 }
 
 .texto-sobre {
-    font-size: auto;    
+    font-size: 1.4rem;    
     justify-content: space-between;
 }
 
@@ -129,13 +128,13 @@ body {
     
 }
 
-@media only screen and (max-width: 600px /*usar tamanho de tela conhecido*/){
+@media only screen and (max-width: 414px /*usar tamanho de tela conhecido*/){
     .texto-sobre {
         flex-direction: column;
     }
 
     body {
-        font-size: 12px;
+        font-size: 7px;
     }
 }
 
