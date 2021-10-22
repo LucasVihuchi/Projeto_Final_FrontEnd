@@ -1,3 +1,4 @@
+/* CSS RESETS */
 *, 
 *:after,
 *:before {
@@ -12,11 +13,13 @@ body {
     list-style-type: none; 
 }
 
+/* SOBRE */
 .sobre-nos{
+    min-height: calc(100vh - (var(--footerHeight)));
     background-color: #D9D5CD;
     font-family: 'Montserrat', sans-serif;    
-    margin-top: 1rem;
-    padding: 0 5%;
+    padding: 2rem 5%;
+    padding-top: calc(var(--headerHeight) + 2rem);
 }
 
 .sobre-nos h2 {
@@ -68,13 +71,12 @@ body {
     color: darkgreen;    
 }
 
-
-
-
-
 .descricao-pessoa {
     margin-bottom: 1rem;
-    margin-top: 1rem;  
-    
+    margin-top: 1rem;   
+}
+
+.pessoa-redes {
+    align-self: baseline;
 }
 

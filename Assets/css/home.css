@@ -1,3 +1,4 @@
+/* CSS RESETS */
 *, 
 *:after,
 *:before {
@@ -12,50 +13,69 @@ body {
     list-style-type: none;  /* não colocar a cor de fundo no body pois atrapalha o restante do código */
 }
 
+/* HOME */
 .home{
     background-color: rgba(239, 224, 209, 0.38);
     font-family: 'Montserrat', sans-serif;
 }
 
-.landing {
-    background: url("../img/imagemTopoMenu.jpg") no-repeat center/cover;
-    height: 100vh;
+/* SEÇÃO LANDING */
+.landing, 
+#carrossel-topo, 
+.landing .card-img {
+    height: 100vh !important;
     width: 100%;
 }
 
+.landing .card-img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* SEÇÃO SERVIÇOS */
 .NServicos {
     color: #000000;   
     text-align: left;  
-    background-color: rgba(210, 195, 178, 0.28);
+    
     margin-top: 2rem;  /*margin parte de fora*/
-    padding: 0 5%; /*padding espaço de dentro */
 }
 
 .NServicos h2 {
     font-size: 2rem;
-    margin-bottom: 2rem;
     font-family: 'Playfair Display', serif;
+    
+    background-color: rgba(210, 195, 178, 0.28);
+    
+    margin-bottom: 2rem;
+    padding: .25rem 5% .5rem 5%; /*padding espaço de dentro */
 }
 
 .cards-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     row-gap: 4rem;
-    padding-bottom: 2rem;
+    column-gap: 2rem;
+
+    padding: 0 5% 3rem 5%;
 }
 
-.cards-container-item { 
-    width:30.375rem;    
+.cards-container-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: 47rem;
+    width: 29.875rem;    
     padding: 1.5rem; /*margem interna, pra não grudar no cantinho*/
-    background-color: white;
     margin-bottom: 1rem; /*margem inferior*/
-    box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+    
+    background-color: white;
+    
     border-radius: 3rem;
+    box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
 }
-
-
 
 .cards-container-item img {
     margin-bottom: 1rem;
@@ -63,35 +83,56 @@ body {
     width: 100%;   
 }
 
-.descricao-servico {
+.cards-container-item h3 {
+    font-size: 1.75rem;
     margin-bottom: 1rem;
-    margin-top: 1rem;  
+}
+
+.descricao-servico {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
 }
 
 .valor-servico {
-    margin-bottom: 0.7rem;
-    margin-top: 1rem;
-    
+    font-size: 1.375rem;     
+    margin-bottom: 1rem;
 }
 
 .cards-container-item button { 
     background-color: #EDECE1;
     color: #452C0E;
+    
     border:none;
-    display: flex;
-    cursor:pointer;
+    border-radius: 2rem; 
+
     font-family: 'Montserrat', sans-serif;
     font-size: auto;
-    padding:1rem 3rem;
     text-decoration:none;
+    
+    padding: 1rem 3rem;
+    margin: 0 auto; 
     margin-bottom: 0.8rem; /*margem inferior*/
-    border-radius: 2rem; 
-    margin-left: 8.4rem; 
+    
+    display: flex;
+    cursor:pointer;
 }
+
+.swiper {
+    display: none;
+    width: 100%;
+    padding: 0 10% 2rem 10%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #647167;
+}
+
+/* SEÇÃO SOBRE */
 
 .sobre {
     background: rgba(109, 129, 122, 0.8); 
-    padding: 1.5rem 5%;
+    padding: 2rem 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -100,43 +141,122 @@ body {
 .sobre-o-spa, .localizacao {
     color: #000000;
     background-color: #C4C4C4;
-    height:30rem;
+    height: 33rem;
     width: 47.5%;         
 }
 
 .sobre-o-spa {
-    padding: 1.5rem;  
+    padding: 1.5rem;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
 .sobre-o-spa h4 {
-    font-size: 1.8rem;
-    margin-bottom: 2rem;  
+    font-size: 1.75rem;
+    margin-bottom: 1.75rem;  
 }
 
 .texto-sobre {
-    font-size: auto;    
+    font-size: 1.25rem;    
     justify-content: space-between;
 }
 
 .localizacao iframe {
     width: 100%; 
-    heighT:100%;     
+    height: 100%;     
 }
 
-.insta, .wpp {
-    max-width: 100%;
-    height: auto;
+.sobre-redes {
+    gap: 1rem;    
+    display: flex;
+}
+
+.sobre-redes > a {
+    padding: .5rem;
+}
+
+.sobre-redes > a > img {
+    height: 1.8rem;
+} 
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 1400px){
+    .cards-container-item {
+        width: 21rem;
+        min-height: 43rem;
+    }
+
+    .cards-container-item > h3 {
+        font-size: 1.5rem;
+    }
     
-}
+    .descricao-servico {
+        font-size: 1rem;
+        margin-bottom: 1.75rem;
+    }
+    
+    .valor-servico {        
+        font-size: 1.25rem;     
+    }
 
-@media only screen and (max-width: 600px /*usar tamanho de tela conhecido*/){
+    .sobre-o-spa, .localizacao {
+        height: 28rem;
+    }
+
+    .sobre-o-spa h4 {
+        font-size: 1.375rem;
+        margin-bottom: 1.5rem;  
+    }
+
     .texto-sobre {
-        flex-direction: column;
+        font-size: 1rem;
     }
 
-    body {
-        font-size: 12px;
+    .sobre-redes > a > img {
+        height: 1.5rem;
+    } 
+}
+
+@media only screen and (max-width: 900px){
+    .sobre {
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+    .sobre-o-spa {
+        gap: 3rem;
+        height: auto;
+    }
+    .sobre-o-spa, .localizacao {
+        width: 90%;         
     }
 }
 
+/* .cards-container{
+    display: none;
+} */
 
+@media only screen and (max-width: 800px){
+    .cards-container{
+        display: none;
+    }
+
+    .swiper {
+        display: block;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .cards-container-item {
+        width: 17rem;
+        min-height: 43rem;
+    }
+}

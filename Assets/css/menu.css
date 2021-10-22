@@ -1,0 +1,166 @@
+/* CSS RESETS */
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    font-size: 100%;
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
+html {
+    --headerHeight: 6.75rem;
+
+    scroll-behavior: smooth;
+}
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    height: var(--headerHeight);
+
+    background-color: rgba(255, 236, 218, 0.8);
+    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.375rem;
+}
+
+.menu-container {
+    padding: 0 5%;
+    width: 100%;
+    height: 100%;
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+header .menu-imagem {
+    height: 6.5rem;
+}
+
+header .menu-item-desktop:link, 
+header .menu-item-desktop:visited, 
+.menu-modal-mobile .menu-item-mobile:link,
+.menu-modal-mobile .menu-item-mobile:visited{
+    color: #000;    
+}
+
+header .menu-item-desktop:hover,
+.menu-modal-mobile .menu-item-mobile:hover {
+    color:rgba(61, 70, 56, 0.49);
+    transition: 0.4s;
+}
+
+header .menu-icon-mobile {
+    cursor: pointer;
+}
+
+header .menu-open {
+    display: none;
+}
+
+.menu-modal-mobile {
+    top:0;
+    left: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+  
+    background-color: #fff;
+   
+    visibility: visible;
+    z-index: 10;
+    transition: opacity .4s;
+   
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 1.375rem;
+}
+
+.menu-modal-mobile.menu-modal-mobile-oculto {
+    opacity: 0;
+    transition: opacity .4s;
+    visibility: hidden;
+    z-index: -10;
+}
+
+.menu-modal-mobile .menu-container-mobile {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  
+    background-color: rgba(109, 129, 122, 0.8);
+}
+
+.menu-modal-mobile .menu-icon-mobile {
+    position: fixed;
+    top:1.5rem;
+    right:1.5rem;
+
+}
+
+.menu-modal-mobile .menu-icon-mobile > img {
+    height: 2rem;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1400px){
+    html {
+        --headerHeight: 4.5rem;
+    }
+    
+    header {
+        font-size: 1.125rem;
+    }
+    header .menu-imagem {
+        height: 4.25rem;
+    }        
+}
+
+@media only screen and (max-width: 1100px){
+    html {
+        --headerHeight: 4.25rem;
+    }
+
+    header {
+        font-size: 1rem;
+    }
+    header .menu-imagem {
+        height: 4rem;
+    }        
+}
+
+@media only screen and (max-width: 750px){
+    header .menu-imagem{
+        height: 4rem;
+
+    }
+    header .menu-item-desktop{
+        display: none;
+        
+    }
+    header .menu-open {
+        display: block;   
+    }
+
+    header .menu-icon-mobile > img {
+        height: 1rem;
+    }
+   
+
+}
