@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/css/menu.css">
+    <link rel="stylesheet" href="./Assets/css/footer.css">
     <link rel="stylesheet" href="Assets/css/home.css">
-    <link rel="shortcut icon" href="assets\img\favicon.ico">
+    <link rel="shortcut icon" href="./Assets/img/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&family=Playfair+Display&display=swap" rel="stylesheet">
@@ -13,6 +15,35 @@
     <title>Serra Spa - O seu Spa na Serra</title>
 </head>
 <body>
+    <header>
+        <nav class="menu-container">
+            <a href="./index.html"> 
+            <img src="./Assets/img/Logo preta completa.png" class="menu-imagem" alt="logo com montanha e texto escrito serra spa"> 
+            </a>
+            <a class="menu-item-desktop" href="./index.html">Home</a>
+            <a class="menu-item-desktop" href="./index.html#NServicos">Nossos serviços</a>
+            <a class="menu-item-desktop" href="./index.html#o_spa">O SPA</a>
+            <a class="menu-item-desktop" href="./Assets/pages/agendamento.html">Agendar</a>
+            <a class="menu-item-desktop" href="./Assets/pages/sobre.html">Sobre Nós</a>
+            <a class="menu-item-desktop" href="./Assets/pages/login.html">Login</a>
+            <a class="menu-icon-mobile menu-open">
+                <img src="./Assets/img/icons/menu-button.svg" alt="icone do menu">
+            </a> 
+        </nav>  
+        <div class="menu-modal-mobile menu-modal-mobile-oculto">
+            <nav class="menu-container-mobile">
+                <a class="menu-icon-mobile menu-close">
+                    <img src="./Assets/img/icons/close-button.svg" alt="icone de fechamento"> 
+                </a>
+                <a class="menu-item-mobile" href="./index.html">Home</a>
+                <a class="menu-item-mobile menu-item-mobile-section" href="#NServicos">Nossos serviços</a>
+                <a class="menu-item-mobile menu-item-mobile-section" href="#o_spa">O SPA</a>
+                <a class="menu-item-mobile" href="./Assets/pages/agendamento.html">Agendar</a>
+                <a class="menu-item-mobile" href="./Assets/pages/sobre.html">Sobre Nós</a>
+                <a class="menu-item-mobile" href="./Assets/pages/login.html">Login</a>
+            </nav>
+        </div>
+    </header>
     <main class="home">
         <section class="landing"> <!--Section tem que ter uma classe--> 
         </section>
@@ -76,7 +107,7 @@
             </div>
         </section>
        
-        <section class="sobre">
+        <section class="sobre" id="o_spa">
             <div class="sobre-o-spa"> 
                 <h4>Sobre o Spa</h4>
                 <p class="texto-sobre"> O Serra Spa fica localizado na serra de Petrópolis e oferece diversos serviços lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis fuga sint necessitatibus, repellat minima ea, ipsam eum incidunt facilis quis tempora nisi odit qui, vero nesciunt nam est sed commodi quae unde tempore. Assumenda eius non dignissimos nostrum sequi itaque quam, eum soluta illo illum, delectus, adipisci inventore nemo deserunt.
@@ -95,8 +126,19 @@
             </div>
             
         </section>
-    
+
     </main>
+    <footer>
+        <span class="direitos-de-uso">
+            <span>@2021 Todos os direitos reservados |</span> <span>Desenvolvidos por Grupo4</span> 
+         </span>
+         <div class="logo-footer">
+             <img src="./Assets/img/Montanha logo branca.png" class="logo-footer-montanha"alt="menu-imagem de uma montanha">
+             <img src="./Assets/img/Nome logo branca.png" alt="texto contendo serra spa">
+         </div>
+    </footer>
+
+    <script src="./Assets/scripts/menu.js"></script>
     
 </body>
 </html>

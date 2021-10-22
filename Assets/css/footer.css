@@ -1,3 +1,4 @@
+/* CSS RESETS */
 *, 
 *:after,
 *:before {
@@ -6,63 +7,95 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+
 body{
     font-size: 100%;
     list-style-type: none;
 }
+
+/* FOOTER */
+html {
+    --footerHeight: 6.75rem;
+}
+
 footer {
     padding: 0 5%;
-    background-color: rgba(61, 70, 56, 0.49);
-    height: 9.75rem;
+    height: var(--footerHeight);
     width: 100%;
+    background-color: #647167;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-    gap: 2rem;
+    gap: 1rem;
 }
+
 footer .direitos-de-uso {  
     font-family: 'Montserrat', sans-serif;
     font-size: 1.125rem;
     color: #fff;
-
 }
+
 footer .logo-footer {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
 }
+
 footer .logo-footer > img {
-    height: 7.875rem;
+    height: 6.75rem;
 }
+
 footer .logo-footer-montanha {
     filter: drop-shadow(0rem .25rem .25rem rgba(0, 0, 0, 0.25));
 }
 
-@media only screen and (max-width: 900px) {
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1400px){
+    html {
+        --footerHeight: 5rem;
+    }
+
+    footer .direitos-de-uso {
+        font-size: .875rem;
+    }
+
+    footer .logo-footer > img {
+        height: 5rem;
+    }
+}
+
+@media only screen and (max-width: 750px){
+    html {
+    --footerHeight: 4rem;
+    }
+
     footer .direitos-de-uso {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         gap: .5rem;
+        font-size: .75rem;
     }
     
-}
-@media only screen and (max-width: 800px){
-    footer {
-        height: 4rem;
-    }
-    footer .direitos-de-uso {
-        font-size: 1rem;
-    }
     footer .logo-footer > img {
         height: 4rem;
     }
-    
 }
+
 @media only screen and (max-width: 500px) {
+    footer {
+        padding: 1rem 5%;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     footer .direitos-de-uso {
-        font-size: .7rem;
+        align-items: center;
+        font-size: .75rem;
     }
 }
