@@ -75,7 +75,7 @@ header .menu-open {
   
     background-color: #fff;
    
-    visibility: 1;
+    visibility: visible;
     z-index: 10;
     transition: opacity .4s;
    
@@ -86,7 +86,7 @@ header .menu-open {
 .menu-modal-mobile.menu-modal-mobile-oculto {
     opacity: 0;
     transition: opacity .4s;
-    visibility: 0;
+    visibility: hidden;
     z-index: -10;
 }
 
