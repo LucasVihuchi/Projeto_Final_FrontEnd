@@ -1,3 +1,4 @@
+/* CSS RESETS */
 *, 
 *:after,
 *:before {
@@ -12,6 +13,7 @@ body {
     list-style-type: none;  /* não colocar a cor de fundo no body pois atrapalha o restante do código */
 }
 
+/* HOME */
 .home{
     background-color: rgba(239, 224, 209, 0.38);
     font-family: 'Montserrat', sans-serif;
@@ -26,15 +28,17 @@ body {
 .NServicos {
     color: #000000;   
     text-align: left;  
-    background-color: rgba(210, 195, 178, 0.28);
+    
     margin-top: 2rem;  /*margin parte de fora*/
-    padding: 0 5%; /*padding espaço de dentro */
 }
 
 .NServicos h2 {
     font-size: 2rem;
-    margin-bottom: 2rem;
+
     font-family: 'Playfair Display', serif;
+    background-color: rgba(210, 195, 178, 0.28);
+    margin-bottom: 2rem;
+    padding: .25rem 5% .5rem 5%; /*padding espaço de dentro */
 }
 
 .cards-container {
@@ -43,11 +47,12 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     row-gap: 4rem;
-    padding-bottom: 2rem;
+    column-gap: 2rem;
+    padding: 0 5% 3rem 5%;
 }
 
 .cards-container-item { 
-    width:30.375rem;    
+    width: 30.375rem;    
     padding: 1.5rem; /*margem interna, pra não grudar no cantinho*/
     background-color: white;
     margin-bottom: 1rem; /*margem inferior*/
@@ -127,6 +132,8 @@ body {
     gap: 2rem;    
     display: flex; 
 }
+
+/* MEDIA QUERIES */
 
 @media only screen and (max-width: 1280px /*usar tamanho de tela conhecido*/){
     .sobre {
