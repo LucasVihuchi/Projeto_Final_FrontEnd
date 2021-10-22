@@ -11,6 +11,9 @@ body{
     font-size: 100%;
     list-style-type: none;
 }
+a{
+    text-decoration: none;
+}
 
 html {
     --headerHeight: 6.75rem;
@@ -23,6 +26,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 9;
     height: var(--headerHeight);
 
     background-color: rgba(255, 236, 218, 0.8);
