@@ -1,10 +1,10 @@
 main .container-fluid {
   padding-top: var(--headerHeight);
 }
-main div {
+main {
   margin: 0px;
   background-color: #d9d5cd;
-  font-size: 30px;
+  font-size: 22px;
 }
 .img-lateral {
   width: 100%;
@@ -23,16 +23,39 @@ main div {
   background-color: rgba(255, 240, 225, 0.548);
 }
 
-.div-meio,
-.formulario-cadastro {
+.div-meio {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   font-family: 'Montserrat', sans-serif;
 }
+h1 {
+  margin: 3%;
+}
+.formulario-cadastro {
+  margin-left: 1%;
+  margin-right: 2%;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  align-items: flex-start;
+  line-height: 25px;
+}
 label input {
-  width: 800px;
+  text-align: left;
+  width: 500px;
+}
+
+.termos {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  width: auto;
+  margin: 0px;
+  padding: 0px;
 }
 
 #Nome-completo,
@@ -50,22 +73,19 @@ label input {
   border: none;
   background-color: #d7d3cd;
 }
-
+.div-botao {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
 .botao {
   background-color: #6d817a;
   color: #ffffff;
   border: none;
+
   border-radius: 0.6rem;
   padding: 0.2rem 3rem;
 }
-
-/* .botao {
-  margin: 0 auto;
-  border: none;
-  border-radius: 0.6rem;
-  padding: 0.5rem 1rem;
-  background-color: #87948c;
-} */
 
 @media only screen and (min-width: 1600px) and (max-width: 1750px) {
   main div {
