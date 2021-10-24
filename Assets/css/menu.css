@@ -53,17 +53,22 @@ header .menu-item-desktop:link,
 header .menu-item-desktop:visited, 
 .menu-modal-mobile .menu-item-mobile:link,
 .menu-modal-mobile .menu-item-mobile:visited{
-    color: #000;    
+    color: #000;
+    transition: color .4s;
 }
 
 header .menu-item-desktop:hover,
 .menu-modal-mobile .menu-item-mobile:hover {
     color:rgba(61, 70, 56, 0.49);
-    transition: 0.4s;
 }
 
 header .menu-icon-mobile {
     cursor: pointer;
+    transition: filter .4s;
+}
+
+header .menu-icon-mobile:hover {
+    filter: invert(65%) sepia(5%) saturate(357%) hue-rotate(47deg) brightness(87%) contrast(86%);
 }
 
 header .menu-open {

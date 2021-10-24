@@ -15,114 +15,136 @@ body{
 
 /* AGENDAMENTO */
 .agendamento-container {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    
+    width: 100%;
+    height: calc(100vh - var(--footerHeight));
+    padding-top: var(--headerHeight);
+    
     background-color: #d9d5cd;
     font-family: 'Montserrat', sans-serif;
-    padding-top: var(--headerHeight);
-    height: calc(100vh - var(--footerHeight));
 }
+
 .agendamento-imagem {
     width: 40%;
-    object-fit: cover;
     height: 100%;
+    object-fit: cover;
 }
+
 .conteudo-container {
-    margin: 3rem 5%;
     width: 100%;
+    margin: 3rem 5%;
     padding: 2rem;
+    
     background-color: rgba(255, 240, 225, 0.55);
 }
+
 .form-container {
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     gap: 2rem;
+
+    height: 100%;
+    
     font-size: 1.25rem;
 }
-.form-container > p{
-    text-align: left;
-    width: fit-content;
 
+.form-container > p{
+    width: fit-content;
+    text-align: left;
 }
+
 .form-agendamento {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1.25rem;
+
     width: 100%;
     max-width: 63rem;
     
 }
+
 .form-checkboxes {
     display: grid;
     grid-auto-flow: row dense;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 1rem;
-    padding: 0 2%;
     grid-row-gap: 1rem;
-
+    
+    padding: 0 2%;
 }
+
 .form-check-label {
     display: flex;
     gap:.5rem;
-
 }
+
 .form-check-input {
     width: 1rem;
     height: 1rem;
 }
+
 .form-ag-label {
-    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: .5rem;
 
-
+    width: 80%;
 }
+
 .form-input {
     width: 100%;
     padding: .125rem .5rem;
+    
     background-color: #d7d3cd;
+    outline-color: #8c8f84;
+    
     border: none;
     border-radius: .5rem;
-    outline-color: #8c8f84;
+    
     font-size: 1.25rem;
     line-height: 1.875rem;
 }
+
 .form-buttons {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
 }
 
-.form-button {
-    background-color:#87948c ;
+.form-button {    
     border-radius: .5rem;
     border: none;
-    color: #fff;
+    
     padding: .125rem .5rem;
-    box-shadow: none;
+    
     line-height: 1.875rem;
     font-size: 1.25rem;
+    
+    color: #fff;
+    background-color:#87948c ;
+    box-shadow: none;
     transition: background-color 0.4s;
 }
+
 .form-button:hover {
     background-color:#647167;
 }
 
-
+/* MEDIA QUERIES */
 @media only screen and (max-height:900px) {
     .agendamento-container {
         min-height: calc(100vh - var(--footerHeight));
         height:fit-content;
     }
+
     .agendamento-imagem {
         min-height: 42.5rem;
         height: 84vh;
@@ -135,28 +157,34 @@ body{
     .form-button {
         font-size: 1.125rem;
     }
+    
     .form-container h2 {
         font-size:1.5rem;
     }
+    
     .form-input,
     .form-button {
         line-height: 1.5rem;
     }
 }
+
 @media only screen and (max-width:1400px) {
     .form-container,
     .form-input,
     .form-button {
         font-size: 1rem;
     }
+    
     .form-container h2 {
         font-size: 1.375rem;
     }
+    
     .form-input,
     .form-button {
         line-height: 1.375rem;
     }
 }
+
 @media only screen and (max-width:1100px) {
     .form-checkboxes {
         grid-template-columns: repeat(2, 1fr);
@@ -168,6 +196,7 @@ body{
         width: 30%;
     }
 }
+
 @media only screen and (max-width:750px) {
     .agendamento-container {
         flex-direction: column;
@@ -190,23 +219,26 @@ body{
     .form-checkboxes {
         width: 100%;
     }
-    
 }
+
 @media only screen and (max-width: 550px) {
     .conteudo-container {
         margin-left: 0;
         margin-right: 0;
     }
+
     .form-ag-label {
         width: 100%;
     }
 }
+
 @media only screen and (max-width: 380px) {
     .form-checkboxes {
         grid-template-columns: repeat(1, 1fr);
         width: fit-content;
 
     }
+    
     .form-ag-label {
         display: flex;
         flex-direction: column;

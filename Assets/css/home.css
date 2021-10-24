@@ -115,6 +115,12 @@ body {
     
     display: flex;
     cursor:pointer;
+
+    transition: background-color .4s;
+}
+
+.cards-container-item button:hover {
+    background-color: #e0dfd0;
 }
 
 .swiper {
@@ -142,7 +148,7 @@ body {
     color: #000000;
     background-color: #C4C4C4;
     height: 33rem;
-    width: 47.5%;         
+    width: 47.5%;
 }
 
 .sobre-o-spa {
@@ -181,7 +187,14 @@ body {
 
 .sobre-redes > a > img {
     height: 1.8rem;
-} 
+    transition: filter .4s;
+}
+
+.sobre-redes > a > img:hover {
+    filter: invert(65%) sepia(5%) saturate(357%) hue-rotate(47deg) brightness(87%) contrast(86%);
+}
+
+
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 1400px){

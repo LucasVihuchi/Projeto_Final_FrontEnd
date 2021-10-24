@@ -3,6 +3,8 @@
 atualizaValidacaoDataForm();
 preencheAutomaticamente();
 
+// Função acionada pelo submit do formulário.
+// Determina se o botão clicado foi 'contato' ou 'agendar'
 function determinaTipoOperacao(event) {
     event.preventDefault();
     if(isAgendamento) {
@@ -18,6 +20,7 @@ function determinaTipoOperacao(event) {
     window.location.reload();
 } 
 
+// Função base para as funções de cadastro. Cria objeto com dados pessoais do form
 function constroiRegistro() {
     let contato = {
         nome: document.getElementById('form-nome').value,
@@ -28,6 +31,7 @@ function constroiRegistro() {
     return contato;
 }
 
+// Função para cadastro de solicitações de agendamento no localStorage
 function cadastraAgendamento() {
     let contatoTemp = constroiRegistro();
     let label = document.getElementsByClassName('form-check-label');
@@ -60,6 +64,7 @@ function cadastraAgendamento() {
     return true;
 }
 
+// Função para cadastro de solicitações de contato no localStorage
 function cadastraContato() {
     let contato = constroiRegistro();
     let contatos = JSON.parse(localStorage.getItem("contatos") || "[]");
@@ -74,6 +79,7 @@ function cadastraContato() {
     return true;
 }
 
+// Função para ataulizar as datas válidas do campo data e hora do form
 function atualizaValidacaoDataForm() {
     let dataAtual = new Date();
     let mesAtual = ("0" + (dataAtual.getMonth() + 1)).slice(-2);
@@ -94,6 +100,7 @@ function atualizaValidacaoDataForm() {
     dataHoraInput.setAttribute('max', dataLimiteFormatada);
 }
 
+// Função que verifica se um email já consta em um vetor de obejtos
 function isDuplicado(email, vetorRegistros) {
     if(vetorRegistros.length === 0) {
         return false;
@@ -106,6 +113,7 @@ function isDuplicado(email, vetorRegistros) {
     return false;
 }
 
+// Função que preenche automaticamente o form se o usuário já estiver logado
 function preencheAutomaticamente() {
     let usuarioLogado = JSON.parse(localStorage.getItem("loginAtual"));
     if(usuarioLogado == null || usuarioLogado == undefined) {
