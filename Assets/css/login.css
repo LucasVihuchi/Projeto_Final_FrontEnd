@@ -1,14 +1,17 @@
 main .container-fluid {
   padding-top: var(--headerHeight);
 }
-main div {
-  margin: 0px;
+main {
+  margin: 0;
   background-color: #d9d5cd;
-  font-size: 30px;
+  font-size: 1.375rem;
+  min-height: calc(100vh - var(--footerHeight));
 }
 .img-lateral {
   width: 100%;
+  height: 100%;
   object-fit: cover;
+  min-height: calc(100vh - var(--footerHeight) - var(--headerHeight));
 }
 .div-img-padding {
   padding-left: 0;
@@ -16,29 +19,63 @@ main div {
 .div-formulario {
   padding: 4% 8%;
   height: 100%;
+  width: 100%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .form {
   background-color: rgba(255, 240, 225, 0.548);
 }
 
-.div-meio,
-.formulario-login {
+.div-meio {
+  width: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   font-family: 'Montserrat', sans-serif;
+  padding: 2rem;
+  gap: 1.5rem;
 }
-label input {
-  width: 800px;
+/* h1 {
+  margin-bottom: 5%;
+  margin-top: 6%;
+} */
+.formulario-login {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  /* -webkit-font-smoothing: antialiased; */
+  align-items: flex-start;
+  line-height: 1.5625rem;
 }
-
+label {
+  text-align: left;
+  width: 100%;
+  display: flex;
+  white-space: nowrap;
+  gap: 0.5rem;
+  align-items: center;
+}
 #E-mail,
 #Senha {
   border: none;
   background-color: #d7d3cd;
+  width: 100%;
+  padding: 0.125rem 0.5rem;
+}
+.div-botao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 4%;
 }
 
 .botao {
@@ -46,123 +83,51 @@ label input {
   color: #ffffff;
   border: none;
   border-radius: 0.6rem;
-  padding: 0.2rem 3rem;
+  padding: 0.2rem 2rem;
 }
 
-@media only screen and (min-width: 1600px) and (max-width: 1750px) {
+@media only screen and (max-width: 1750px) {
   main div {
-    color: #02fd39;
-    font-size: 28px;
-  }
-  .botao {
-    padding: 0.19rem 2.9rem;
-  }
-  label input {
-    width: 700px;
+    font-size: 1.25rem;
   }
 }
 
-@media only screen and (min-width: 1400px) and (max-width: 1601px) {
+@media only screen and (max-width: 1399px) {
   main div {
-    color: #fd02dc;
-    font-size: 25px;
-  }
-  .botao {
-    padding: 0.18rem 2.8rem;
-  }
-  label input {
-    width: 600px;
+    font-size: 1.125rem;
   }
 }
 
-@media only screen and (min-width: 1250px) and (max-width: 1401px) {
-  main div {
-    color: #1302fd;
-    font-size: 22px;
+@media only screen and (max-width: 751px) {
+  .div-formulario {
+    margin: 0;
   }
-  .botao {
-    padding: 0.1rem 2rem;
+  .row {
+    flex-direction: column;
+    align-items: center;
   }
-  label input {
-    width: 500px;
-  }
-}
-@media only screen and (min-width: 1050px) and (max-width: 1251px) {
-  main div {
-    color: #fd0202;
-    font-size: 21px;
-  }
-  .botao {
-    padding: 0.03rem 1.7rem;
-  }
-  label input {
-    width: 450px;
-  }
-}
-@media only screen and (min-width: 900px) and (max-width: 1051px) {
-  main div {
-    color: #02fd0f;
-    font-size: 19px;
-  }
-  .botao {
-    padding: 0.01rem 1.5rem;
-  }
-  label input {
-    width: 400px;
-  }
-}
-
-@media only screen and (min-width: 750px) and (max-width: 901px) {
-  main div {
-    color: #fd9002;
-    font-size: 17px;
-  }
-  .botao {
-    padding: 0.008rem 1.2rem;
-  }
-  label input {
-    width: 300px;
-  }
-}
-
-@media only screen and (min-width: 625px) and (max-width: 751px) {
-  main div {
-    color: #fd9002;
-    font-size: 15px;
-  }
-  .botao {
-    padding: 0.005rem 1rem;
-  }
-  label input {
-    width: 250px;
-  }
-}
-@media only screen and (min-width: 500px) and (max-width: 651px) {
-  main div {
-    color: #f502fd;
-    font-size: 12px;
-  }
-  .botao {
-    padding: 0.002rem 0.8rem;
-  }
-  label input {
-    width: 200px;
-  }
-}
-
-@media only screen and (min-width: 230px) and (max-width: 501px) {
-  main div {
-    color: #02f5fd;
-    font-size: 11px;
-  }
-  .botao {
-    padding: 0.002rem 0.8rem;
-  }
-  label input {
-    width: 150px;
+  .div-img-padding {
+    width: 100%;
+    height: 30vh;
+    padding: 0;
   }
   .img-lateral {
+    min-height: auto;
+  }
+  .main-content {
     width: 100%;
-    object-fit: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .div-formulario {
+    padding: 2rem 5%;
+  }
+}
+@media only screen and (max-width: 430px) {
+  label {
+    flex-direction: column;
+    text-align: left;
+    justify-content: left;
+    align-items: flex-start;
   }
 }
