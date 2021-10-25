@@ -17,7 +17,7 @@ body{
 .agendamento-container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     
     width: 100%;
     height: calc(100vh - var(--footerHeight));
@@ -107,7 +107,6 @@ body{
     outline-color: #8c8f84;
     
     border: none;
-    border-radius: .5rem;
     
     font-size: 1.25rem;
     line-height: 1.875rem;
@@ -123,7 +122,7 @@ body{
     border-radius: .5rem;
     border: none;
     
-    padding: .125rem .5rem;
+    padding: .2rem 1rem;
     
     line-height: 1.875rem;
     font-size: 1.25rem;
@@ -158,10 +157,6 @@ body{
         font-size: 1.125rem;
     }
     
-    .form-container h2 {
-        font-size:1.5rem;
-    }
-    
     .form-input,
     .form-button {
         line-height: 1.5rem;
@@ -173,10 +168,6 @@ body{
     .form-input,
     .form-button {
         font-size: 1rem;
-    }
-    
-    .form-container h2 {
-        font-size: 1.375rem;
     }
     
     .form-input,
@@ -212,6 +203,11 @@ body{
 
     }
 
+    .conteudo-container {
+        width: 90%;
+        margin: 2rem 0;
+    }
+
     .form-agendamento {
         width: 90%;
     }
@@ -222,17 +218,12 @@ body{
 }
 
 @media only screen and (max-width: 550px) {
-    .conteudo-container {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
     .form-ag-label {
         width: 100%;
     }
 }
 
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 430px) {
     .form-checkboxes {
         grid-template-columns: repeat(1, 1fr);
         width: fit-content;
@@ -240,8 +231,8 @@ body{
     }
     
     .form-ag-label {
-        display: flex;
         flex-direction: column;
+        align-items: flex-start;
     }
 }
 
