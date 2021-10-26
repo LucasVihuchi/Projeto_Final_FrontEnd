@@ -42,7 +42,8 @@ function cadastraUsuario(event) {
     
     cadastros.push(usuario);
     localStorage.setItem("usuariosCadastrados", JSON.stringify(cadastros));
-    
+     
+    alert("Cadastro de usuário realizado com sucesso!");
     window.location.reload();
 }
 
