@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -63,7 +63,7 @@
               <div class="form div-meio">
                 <h1>CADASTRE-SE</h1>
 
-                <form class="formulario-cadastro" action="/action_page.php">
+                <form class="formulario-cadastro" method="post" onsubmit="cadastraUsuario(event)">
                   <label class="Nome-completo" for="Nome-completo">
                     Nome completo:
                     <input type="text" id="Nome-completo" name="Nome-completo" required />
@@ -111,7 +111,7 @@
                   </label>
 
                   <label class="label-container" for="autorizo">
-                    <input type="checkbox" id="autorizo" name="Autorizo" value="Autorizo o recebimento de e-mails." required />
+                    <input type="checkbox" id="autorizo" name="Autorizo" value="Autorizo o recebimento de e-mails."/>
                     Autorizo o recebimento de e-mails
                   </label>
 
@@ -137,6 +137,7 @@
       </div>
     </footer>
     <script src="../scripts/menu.js"></script>
+    <script src="../scripts/cadastrar.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

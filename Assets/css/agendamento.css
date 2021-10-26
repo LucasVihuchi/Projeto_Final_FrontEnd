@@ -15,146 +15,187 @@ body{
 
 /* AGENDAMENTO */
 .agendamento-container {
-    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100%;
+    height: calc(100vh - var(--footerHeight));
+    padding-top: var(--headerHeight);
+    
     background-color: #d9d5cd;
     font-family: 'Montserrat', sans-serif;
-    padding-top: var(--headerHeight);
-    height: calc(100vh - var(--footerHeight));
 }
+
 .agendamento-imagem {
     width: 40%;
+    height: 100%;
     object-fit: cover;
-    height: 100%;
 }
+
 .conteudo-container {
+    width: 100%;
     margin: 3rem 5%;
-    padding: 1.5rem;
+    padding: 2rem;
+    
     background-color: rgba(255, 240, 225, 0.55);
-    /* height: calc(100% - 6rem); */
 }
+
 .form-container {
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    gap: 1rem;
+    gap: 2rem;
+
+    height: 100%;
+    
     font-size: 1.25rem;
 }
-.form-container > p{
-    text-align: left;
-    width: 95%;
 
+.form-container > p{
+    width: fit-content;
+    text-align: left;
 }
+
 .form-agendamento {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1.25rem;
-    
+
+    width: 100%;
+    max-width: 63rem;
 }
+
 .form-checkboxes {
     display: grid;
     grid-auto-flow: row dense;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 1rem;
-    padding: 0 2.5%;
     grid-row-gap: 1rem;
-
+    
+    padding: 0 2%;
 }
+
 .form-check-label {
     display: flex;
     gap:.5rem;
-
 }
+
 .form-check-input {
-    width: 16px !important;
+    width: 1rem;
     height: 1rem;
 }
+
 .form-ag-label {
-    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: .5rem;
 
-
+    width: 80%;
 }
+
 .form-input {
     width: 100%;
     padding: .125rem .5rem;
+    
     background-color: #d7d3cd;
-    border: none;
-    border-radius: .5rem;
     outline-color: #8c8f84;
+    
+    border: none;
+    
+    font-size: 1.25rem;
+    line-height: 1.875rem;
 }
+
 .form-buttons {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
 }
-.form-button {
-    background-color:#87948c ;
+
+.form-button {    
     border-radius: .5rem;
     border: none;
-    color: #fff;
-    padding: .125rem .5rem;
-    box-shadow: none;
     
+    padding: .2rem 1rem;
+    
+    line-height: 1.875rem;
+    font-size: 1.25rem;
+    
+    color: #fff;
+    background-color:#87948c ;
+    box-shadow: none;
+    transition: background-color 0.4s;
+
+    cursor: pointer;
 }
+
 .form-button:hover {
     background-color:#647167;
 }
 
-
+/* MEDIA QUERIES */
 @media only screen and (max-height:900px) {
     .agendamento-container {
+        min-height: calc(100vh - var(--footerHeight));
         height:fit-content;
-
     }
+
     .agendamento-imagem {
         min-height: 42.5rem;
-        height: 80vh;
+        height: 84vh;
     }
 }
 
 @media only screen and (max-width:1760px) {
-    .form-container {
+    .form-container,
+    .form-input,
+    .form-button {
         font-size: 1.125rem;
     }
-    .form-container h2 {
-        font-size:1.5rem;
+    
+    .form-input,
+    .form-button {
+        line-height: 1.5rem;
     }
 }
+
 @media only screen and (max-width:1400px) {
-    .form-container {
+    .form-container,
+    .form-input,
+    .form-button {
         font-size: 1rem;
     }
-    .form-container h2 {
-        font-size: 1.375rem;
+    
+    .form-input,
+    .form-button {
+        line-height: 1.375rem;
     }
 }
+
 @media only screen and (max-width:1100px) {
     .form-checkboxes {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
 @media only screen and (max-width:850px) {
     .agendamento-imagem{
         width: 30%;
-
     }
-
 }
+
 @media only screen and (max-width:750px) {
     .agendamento-container {
         flex-direction: column;
         align-items: center;
-
+        justify-content: flex-start;
+        min-height: calc(100vh - var(--footerHeight));
+        height:fit-content;
     }
 
     .agendamento-imagem {
@@ -163,25 +204,38 @@ body{
         min-height: auto;
 
     }
+
+    .conteudo-container {
+        width: 90%;
+        margin: 2rem 0;
+    }
+
     .form-agendamento {
         width: 90%;
     }
+
     .form-checkboxes {
         width: 100%;
     }
-    
 }
-@media only screen and (max-width:550px) {
-    .conteudo-container {
-        margin-left: 0;
-        margin-right: 0;
-    }
+
+@media only screen and (max-width: 550px) {
     .form-ag-label {
         width: 100%;
     }
+}
 
+@media only screen and (max-width: 430px) {
+    .form-checkboxes {
+        grid-template-columns: repeat(1, 1fr);
+        width: fit-content;
+
+    }
     
-
+    .form-ag-label {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 
