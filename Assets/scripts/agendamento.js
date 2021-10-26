@@ -52,6 +52,7 @@ function cadastraAgendamento() {
     let contato = {...contatoTemp, 
         servicos: servicosDesejados        
     }
+
     let agendamentos = JSON.parse(localStorage.getItem("agendamentos") || "[]");
 
     if(isDuplicado(contato.email, agendamentos)) {
