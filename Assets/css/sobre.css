@@ -32,13 +32,17 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     row-gap: 4rem;
+    column-gap: .5rem;
     padding-bottom: 2rem;
 
 }
 
 .pessoa-container-item { 
-    width: 286px;
-    height: 574px;    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 17.875rem;
+    height: 36rem;    
     padding: 1.5rem; /*margem interna, pra não grudar no cantinho*/
     background-color: #C4C4C4;
     margin-bottom: 1rem; /*margem inferior*/
@@ -87,3 +91,16 @@ body {
     align-self: baseline;
 }
 
+@media only screen and (max-width: 670px) {
+    .pessoa-container {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .pessoa-container-item {
+        width: 90%;
+        min-height: 36rem;
+        height: auto;
+    }
+}
