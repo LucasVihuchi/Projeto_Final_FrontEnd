@@ -16,7 +16,7 @@ body {
 /* SOBRE */
 .sobre-nos{
     min-height: calc(100vh - (var(--footerHeight)));
-    background-color: #D9D5CD;
+    background-color: #DEE3D9;
     font-family: 'Montserrat', sans-serif;    
     padding: 2rem 5%;
     padding-top: calc(var(--headerHeight) + 2rem);
@@ -33,6 +33,7 @@ body {
     flex-wrap: wrap;
     row-gap: 4rem;
     padding-bottom: 2rem;
+
 }
 
 .pessoa-container-item { 
@@ -43,12 +44,18 @@ body {
     margin-bottom: 1rem; /*margem inferior*/
     border-radius: 1rem;
     text-align: center;
+
+    background-color: white;
+    
+    border-radius: 3rem;
+    box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
 }
 
 .pessoa-container-item img {
     margin-bottom: 1rem;
     height: auto;
     width: 50%;   
+    border-radius: 50%;
 }
 
 .pessoa-container-item a {
