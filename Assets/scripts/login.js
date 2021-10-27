@@ -20,7 +20,7 @@ function logarUsuario(event) {
     }
     
     localStorage.setItem("loginAtual", JSON.stringify(usuarioEncontrado));
-
+    alert("Usuário logado com sucesso!");
     window.location.reload();
 }
 
@@ -28,6 +28,7 @@ function deslogarUsuario(event){
     event.preventDefault();
 
     localStorage.removeItem("loginAtual");
+    alert("Usuário deslogado com sucesso!");
     window.location.reload();
 }
 

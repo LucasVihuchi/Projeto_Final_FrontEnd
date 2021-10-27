@@ -11,11 +11,13 @@ function determinaTipoOperacao(event) {
         if (!cadastraAgendamento()) {
             return;
         }
+        alert("Solicitação de agendamento realizada com sucesso!");
     }
     else{
         if (!cadastraContato()) {
             return;
         }
+        alert("Solicitação de contato realizada com sucesso!");
     }
     window.location.reload();
 } 
