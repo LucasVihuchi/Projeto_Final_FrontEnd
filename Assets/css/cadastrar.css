@@ -54,6 +54,7 @@ main .container-fluid {
     font-family: 'Montserrat', sans-serif;
     align-items: flex-start;
     line-height: 1.5625rem;
+    gap: 1.5625rem;
   }
   label {
     text-align: left;
