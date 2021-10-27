@@ -64,12 +64,12 @@
                 <form class="formulario-login" method="post" onsubmit="logarUsuario(event)">
                   <label class="e-mail" for="E-mail">
                     E-MAIL:
-                    <input type="email" id="E-mail" name="E-mail" required />
+                    <input type="email" id="E-mail" name="E-mail" minlength="7" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$" required />
                   </label>
                   <br />
                   <label for="Senha">
                     SENHA:
-                    <input type="password" id="Senha" name="Senha" size="40" required />
+                    <input type="password" id="Senha" name="Senha" minlength="6" required />
                   </label>
                   <br />
                   <div class="div-botao">

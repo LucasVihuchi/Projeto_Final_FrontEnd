@@ -64,13 +64,13 @@
                 <form class="formulario-cadastro" method="post" onsubmit="cadastraUsuario(event)">
                   <label class="Nome-completo" for="Nome-completo">
                     Nome completo:
-                    <input type="text" id="Nome-completo" name="Nome-completo" required />
+                    <input type="text" id="Nome-completo" name="Nome-completo" minlength="4" required />
                   </label>
                   <br />
 
                   <label class="Data-de-nascimento" for="Data-de-nascimento">
                     Data de nascimento:
-                    <input type="date" id="Data-de-nascimento" name="Data-de-nascimento" required />
+                    <input type="date" id="Data-de-nascimento" name="Data-de-nascimento" min="1900-01-01" max="2008-01-01" required />
                   </label>
 
                   <br />
@@ -83,23 +83,23 @@
 
                   <label class="e-mail" for="E-mail">
                     E-mail:
-                    <input type="email" id="E-mail" name="E-mail" required />
+                    <input type="email" id="E-mail" name="E-mail" minlength="7" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$" required />
                   </label>
                   <br />
 
                   <label class="Crie-sua-senha" for="Crie-sua-senha">
                     Senha:
-                    <input type="password" id="Crie-sua-senha" name="Crie-sua-senha" required />
+                    <input type="password" id="Crie-sua-senha" name="Crie-sua-senha" minlength="6" required />
                   </label>
                   <br />
 
                   <label class="Confirme-sua-senha" for="Confirme-sua-senha">
                     Confirme sua senha:
-                    <input type="password" id="Confirme-sua-senha" name="Confirme-sua-senha" required />
+                    <input type="password" id="Confirme-sua-senha" name="Confirme-sua-senha" minlength="6" required />
                   </label>
                   <br />
                   <label class="label-container" for="Termos-de-uso">
-                    <input type="checkbox" id="Termos-de-uso" name="Termos" value="Declaro que li os Termos de Uso." />
+                    <input type="checkbox" id="Termos-de-uso" name="Termos" value="Declaro que li os Termos de Uso." required/>
                     <span>
                       Declaro que li os
                       <a href="https://www.gstatic.com/policies/terms/pdf/20200331/ba461e2f/google_terms_of_service_pt-BR_br.pdf" alt="Termos de uso da Google. Não temos o nosso." target="_blank">
