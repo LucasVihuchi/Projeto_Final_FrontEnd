@@ -11,8 +11,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
@@ -50,7 +49,6 @@
           <a class="menu-item-mobile" href="login.html">Login</a>
         </nav>
       </div>
-      <!-- <div class="div-header"></div> -->
     </header>
     <main>
       <div class="container-fluid">
@@ -66,13 +64,13 @@
                 <form class="formulario-cadastro" method="post" onsubmit="cadastraUsuario(event)">
                   <label class="Nome-completo" for="Nome-completo">
                     Nome completo:
-                    <input type="text" id="Nome-completo" name="Nome-completo" required />
+                    <input type="text" id="Nome-completo" name="Nome-completo" minlength="4" required />
                   </label>
                   <br />
 
                   <label class="Data-de-nascimento" for="Data-de-nascimento">
                     Data de nascimento:
-                    <input type="date" id="Data-de-nascimento" name="Data-de-nascimento" required />
+                    <input type="date" id="Data-de-nascimento" name="Data-de-nascimento" min="1900-01-01" max="2008-01-01" required />
                   </label>
 
                   <br />
@@ -85,28 +83,28 @@
 
                   <label class="e-mail" for="E-mail">
                     E-mail:
-                    <input type="email" id="E-mail" name="E-mail" required />
+                    <input type="email" id="E-mail" name="E-mail" minlength="7" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$" required />
                   </label>
                   <br />
 
                   <label class="Crie-sua-senha" for="Crie-sua-senha">
                     Senha:
-                    <input type="password" id="Crie-sua-senha" name="Crie-sua-senha" required />
+                    <input type="password" id="Crie-sua-senha" name="Crie-sua-senha" minlength="6" required />
                   </label>
                   <br />
 
                   <label class="Confirme-sua-senha" for="Confirme-sua-senha">
                     Confirme sua senha:
-                    <input type="password" id="Confirme-sua-senha" name="Confirme-sua-senha" required />
+                    <input type="password" id="Confirme-sua-senha" name="Confirme-sua-senha" minlength="6" required />
                   </label>
                   <br />
                   <label class="label-container" for="Termos-de-uso">
-                    <input type="checkbox" id="Termos-de-uso" name="Termos" value="Declaro que li os Termos de Uso." />
-                    <span
-                      >Declaro que li os
+                    <input type="checkbox" id="Termos-de-uso" name="Termos" value="Declaro que li os Termos de Uso." required/>
+                    <span>
+                      Declaro que li os
                       <a href="https://www.gstatic.com/policies/terms/pdf/20200331/ba461e2f/google_terms_of_service_pt-BR_br.pdf" alt="Termos de uso da Google. Não temos o nosso." target="_blank">
-                        Termos de uso</a
-                      >
+                        Termos de uso
+                      </a>
                     </span>
                   </label>
 
@@ -136,12 +134,23 @@
         <img src="../img/Nome logo branca.png" alt="Imagem contendo o texto Serra Spa" />
       </div>
     </footer>
+
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
     <script src="../scripts/menu.js"></script>
     <script src="../scripts/cadastrar.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
   </body>
 </html>

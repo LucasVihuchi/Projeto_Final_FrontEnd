@@ -72,6 +72,7 @@ main .container-fluid {
   #E-mail {
     border: none;
     background-color: #d7d3cd;
+    outline-color: #8c8f84;
     width: 100%;
     padding: 0.125rem 0.5rem;
   }
@@ -85,6 +86,7 @@ main .container-fluid {
   }
   .botao {
     background-color: #6d817a;
+    outline-color: #8c8f84;
     color: #ffffff;
     border: none;
     border-radius: 0.6rem;
