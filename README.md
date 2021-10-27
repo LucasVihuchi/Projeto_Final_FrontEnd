@@ -47,6 +47,6 @@ Lucas          | Marcella       | Naiara         |
 
 Richard        | Vitor          | Wellington     |
 -------------- | -------------- | -------------- |
-<a href="https://www.linkedin.com/in/richard-dutra-ferreira/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>| <a href="https://github.com/vitorc7"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>| <a href="https://www.linkedin.com/in/wellington-barbosa-de-souza-474585224"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>|
+<a href="https://www.linkedin.com/in/richard-dutra-ferreira/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>| <a href="https://www.linkedin.com/in/vitor-ciscoto-699a36224/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>| <a href="https://www.linkedin.com/in/wellington-barbosa-de-souza-474585224"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>|
 
 
